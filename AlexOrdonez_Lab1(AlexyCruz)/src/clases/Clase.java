@@ -14,15 +14,16 @@ import javax.swing.JOptionPane;
  */
 public class Clase {
 
-    private String nombre, seccion,  maestro;
-    private int cant_alumnos, Unidades_va;
+    private String nombre, seccion,maestro;
+    private int cant_alumnos, Unidades_va,value;
     public ArrayList<String> Alumnos;
-    public Clase(String nombre,String seccion,String maestro,int cant_alumnos,int Unidades_va){
+    public Clase(String nombre,String seccion,String maestro,int cant_alumnos,int Unidades_va,int value){
         this.nombre = nombre;
         this.seccion = seccion;
         this.cant_alumnos = cant_alumnos;
         this.maestro=maestro;
         this.Unidades_va=Unidades_va;
+        this.value=value;
     }
     public void setnombre(String nombre) {
         this.nombre = nombre;

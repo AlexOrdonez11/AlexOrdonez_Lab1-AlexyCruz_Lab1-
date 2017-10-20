@@ -38,7 +38,8 @@ static ArrayList<alumnos> alumno ;
                     maestro=JOptionPane.showInputDialog("nombre ya ingresado"+"Ingrese el nombre del maestro de la clase:");
                 }
                 int unid=Integer.parseInt(JOptionPane.showInputDialog("Ingrese las unidades valorativas"));
-                clases.add(new Clase(nombre,Seccion,null,cant_alum,unid));
+                int value=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor de la clase"));
+                clases.add(new Clase(nombre,Seccion,null,cant_alum,unid,value));
                 String titulo=JOptionPane.showInputDialog("Ingrese el titulo del maestro");
                 String usuario=JOptionPane.showInputDialog("Ingrese el usuario del maestro");
                 while(usuario(usuario)==true){
@@ -52,7 +53,14 @@ static ArrayList<alumnos> alumno ;
                 JOptionPane.showMessageDialog(null, "Clase y maestro agrgados correctamente");
                 break;
             case 2:
-                
+                String alum=JOptionPane.showInputDialog("Ingrese su nombre");
+                String cuenta=JOptionPane.showInputDialog("Ingrese su numero de cuenta");
+                String user=JOptionPane.showInputDialog("Ingrese el usuario");
+                String contra=JOptionPane.showInputDialog("Ingrese su contrasena");
+                String carrera=JOptionPane.showInputDialog("Ingrese la carrera");
+                String clase=JOptionPane.showInputDialog("Ingrese la clase");
+                int edad=Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad"));
+                int dinero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el dinero disponible"));
         }
     } 
     public static boolean maestro(String maestro){
