@@ -15,9 +15,10 @@ import javax.swing.JOptionPane;
 public class Clase {
 
     private String nombre, seccion,maestro;
-    private int cant_alumnos, Unidades_va,value;
+    private int cant_alumnos, Unidades_va;
+    private double value;
     public ArrayList<String> Alumnos;
-    public Clase(String nombre,String seccion,String maestro,int cant_alumnos,int Unidades_va,int value){
+    public Clase(String nombre,String seccion,String maestro,int cant_alumnos,int Unidades_va,double value){
         this.nombre = nombre;
         this.seccion = seccion;
         this.cant_alumnos = cant_alumnos;
@@ -64,5 +65,11 @@ public class Clase {
     }
     public int getUnidades(){
         return Unidades_va;
+    }
+    public void setvalue(double value) {
+        this.value = value;
+    }
+    public double getvalue(){
+        return value;
     }
 }

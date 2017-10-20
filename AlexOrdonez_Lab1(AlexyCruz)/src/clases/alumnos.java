@@ -13,12 +13,13 @@ import java.util.ArrayList;
  */
 public class alumnos {
     private String nombre,num_cuenta,carrera,usuario,contrasena;
-    private int edad,dinero_dis;
+    private int edad;
+    private double dinero_dis;
     public ArrayList<String> clases_cursa;
     public alumnos(){
         
     }
-    public alumnos(String Clase,int edad,int dinero_dis,String nombre,String num_cuenta,String carrera,String usuario,String contrasena){
+    public alumnos(String Clase,int edad,double dinero_dis,String nombre,String num_cuenta,String carrera,String usuario,String contrasena){
         this.nombre=nombre;
         this.num_cuenta=num_cuenta;
         this.contrasena=contrasena;
@@ -62,10 +63,10 @@ public class alumnos {
         return contrasena;
     }
 
-    public void setdinero_dis(int dinero_dis) {
+    public void setdinero_dis(double dinero_dis) {
         this.dinero_dis = dinero_dis;
     }
-    public int getdinero_dis(){
+    public double getdinero_dis(){
         return dinero_dis;
     }
     public void setclase(String Clase){

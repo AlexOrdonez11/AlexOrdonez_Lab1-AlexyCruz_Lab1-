@@ -15,14 +15,15 @@ import javax.swing.JOptionPane;
 public class maestros {
 
     private String nombre, titulo, maestria, Usuario, Contrasena;
-    private int Salario, Cantidad_Clases;
+    private int  Cantidad_Clases;
+    private double Salario;
     public ArrayList<String> secciones, Nombre, Titulo, Maestria, usuario, contrasena;
 
     public maestros() {
 
     }
 
-    public maestros(String nombre, String titulo, String maestria, String Usuario, String Contrasena, int Salario, int Cantidad_Clases) {
+    public maestros(String nombre, String titulo, String maestria, String Usuario, String Contrasena, double Salario, int Cantidad_Clases) {
         this.nombre = nombre;
         this.titulo = titulo;
         this.Contrasena = Contrasena;
@@ -68,10 +69,10 @@ public class maestros {
         return Contrasena;
     }
 
-    public void setSalario(int Salario) {
+    public void setSalario(double Salario) {
         this.Salario = Salario;
     }
-    public int getSalario(){
+    public double getSalario(){
         return Salario;
     }
 
