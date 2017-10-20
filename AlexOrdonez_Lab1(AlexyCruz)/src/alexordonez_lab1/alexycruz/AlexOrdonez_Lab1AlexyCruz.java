@@ -26,6 +26,7 @@ public class AlexOrdonez_Lab1AlexyCruz {
      */
     public static void main(String[] args) {
 
+        
     }
 
     public static void opcion_in() {
