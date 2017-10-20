@@ -75,6 +75,9 @@ public class AlexOrdonez_Lab1AlexyCruz {
                     }
                     alun.clases_cursa.add(clase);
                 }
+                break;
+            case 3:
+                
         }
     }
 
