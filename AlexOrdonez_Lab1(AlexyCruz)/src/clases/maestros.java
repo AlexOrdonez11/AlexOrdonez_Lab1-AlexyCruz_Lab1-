@@ -13,46 +13,72 @@ import javax.swing.JOptionPane;
  * @author Alex Ordonez
  */
 public class maestros {
-    private String nombre,titulo,maestria,Usuario,Contrasena;
-    private int Salario,Cantidad_Clases;
-    public ArrayList<String> secciones,Nombre,Titulo,Maestria,usuario,contrasena;
-    public maestros(String nombre,String titulo,String maestria,String Usuario,String Contrasena,int Salario,int Cantidad_Clases){
-        this.nombre=nombre;
-        this.titulo=titulo;
-        this.Contrasena=Contrasena;
-        this.maestria=maestria;
-        this.Usuario=Usuario;
-        this.Salario=Salario;
-        this.Cantidad_Clases=Cantidad_Clases;
+
+    private String nombre, titulo, maestria, Usuario, Contrasena;
+    private int Salario, Cantidad_Clases;
+    public ArrayList<String> secciones, Nombre, Titulo, Maestria, usuario, contrasena;
+
+    public maestros() {
+
     }
-    public void addnombre(String nombre){
-        if(!nombre.equals(this.nombre)){
-            this.nombre=nombre;
-        }
-        else{
-            JOptionPane.showMessageDialog(null, nombre+" ya registrado");
-        }
+
+    public maestros(String nombre, String titulo, String maestria, String Usuario, String Contrasena, int Salario, int Cantidad_Clases) {
+        this.nombre = nombre;
+        this.titulo = titulo;
+        this.Contrasena = Contrasena;
+        this.maestria = maestria;
+        this.Usuario = Usuario;
+        this.Salario = Salario;
+        this.Cantidad_Clases = Cantidad_Clases;
     }
-    public void addtitulo(String titulo){
-        this.titulo=titulo;
+
+    public void setnombre(String nombre) {
+        this.nombre = nombre;
     }
-    public void addmaestria(String maestria){
-        this.maestria=maestria;
+
+    public String getnombre() {
+        return nombre;
     }
-    public void addUsuario(String Usuuario){
-        if(!Usuario.equals(this.Usuario)){
-        this.Usuario=Usuario;
-        }else{
-            JOptionPane.showMessageDialog(null, Usuario+" ya registrado");
-        }
+
+    public void settitulo(String titulo) {
+        this.titulo = titulo;
     }
-    public void addContrasena(String Contrasena){
-        this.Contrasena=Contrasena;
+    public String gettitulo(){
+        return titulo;
     }
-    public void addsalario(int Salario){
-        this.Salario=Salario;
+
+    public void setmaestria(String maestria) {
+        this.maestria = maestria;
     }
-    public void addCantidad_Clases(int Cantidad_Clases){
-        this.Cantidad_Clases=Cantidad_Clases;
+    public String getmaestria(){
+        return maestria;
+    }
+
+    public void setUsuario(String Usuario) {
+        this.Usuario = Usuario;
+    }
+    public String getUsuario(){
+        return Usuario;
+    }
+
+    public void setContrasena(String Contrasena) {
+        this.Contrasena = Contrasena;
+    }
+    public String getContrasena(){
+        return Contrasena;
+    }
+
+    public void setSalario(int Salario) {
+        this.Salario = Salario;
+    }
+    public int getSalario(){
+        return Salario;
+    }
+
+    public void setCantidad_Clases(int Cantidad_Clases) {
+        this.Cantidad_Clases = Cantidad_Clases;
+    }
+    public int getCantidad_Clases(){
+        return Cantidad_Clases;
     }
 }

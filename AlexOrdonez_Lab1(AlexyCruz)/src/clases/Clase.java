@@ -17,12 +17,12 @@ public class Clase {
     private String nombre, seccion,  maestro;
     private int cant_alumnos, Unidades_va;
     public ArrayList<String> Alumnos;
-    public Clase(String nombre,String seccion,String maestro,String alumnos,int cant_alumnos,int Unidades_va){
+    public Clase(String nombre,String seccion,String maestro,int cant_alumnos,int Unidades_va){
         this.nombre = nombre;
         this.seccion = seccion;
         this.cant_alumnos = cant_alumnos;
         this.maestro=maestro;
-        Alumnos.add(alumnos);
+        this.Unidades_va=Unidades_va;
     }
     public void setnombre(String nombre) {
         this.nombre = nombre;
@@ -34,7 +34,7 @@ public class Clase {
     public void setseccion (String seccion) {
         this.seccion = seccion;
     }
-    public String setseccion(){
+    public String getseccion(){
         return seccion;
     }
     public void setcant_alumnos(int cant_alumnos) {
