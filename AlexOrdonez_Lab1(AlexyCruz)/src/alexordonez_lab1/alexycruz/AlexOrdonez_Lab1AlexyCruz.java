@@ -57,6 +57,7 @@ public class AlexOrdonez_Lab1AlexyCruz {
             case 2:
                 char resp = 's';
                 while (resp != 's') {
+                    alumnos alun=new alumnos();
                     String alum = JOptionPane.showInputDialog("Ingrese su nombre");
                     String cuenta = JOptionPane.showInputDialog("Ingrese su numero de cuenta");
                     String user = JOptionPane.showInputDialog("Ingrese el usuario");
@@ -65,7 +66,14 @@ public class AlexOrdonez_Lab1AlexyCruz {
                     int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad"));
                     double dinero = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el dinero disponible"));
                     String clase = JOptionPane.showInputDialog("Ingrese la clase");
+                    while(dinero(dinero,clase,alum)==true){
+                        clase = JOptionPane.showInputDialog("Ingrese la clase");
+                    }
                     resp = JOptionPane.showInputDialog("Desea salir [s]").charAt(0);
+                    if(!alumno.contains(new alumnos(clase,edad,dinero,alum,cuenta,carrera,user,contra))){
+                        alumno.add(new alumnos(clase,edad,dinero,alum,cuenta,carrera,user,contra));
+                    }
+                    alun.clases_cursa.add(clase);
                 }
         }
     }
@@ -92,13 +100,26 @@ public class AlexOrdonez_Lab1AlexyCruz {
         return g;
     }
 
-    public boolean dinero(double dinero, double value, String clase) {
+    public static boolean dinero(double dinero, String clase,String alum) {
         boolean d = false;
-        double cont1 = value + (value + value * 0.2) + (value + value * 0.4);
+        int c=0;
         for (Clase object : clases) {
             if (clase.equals(object.getnombre())) {
-                
+                c=1;
+                double cont1 = object.getvalue() + (object.getvalue() + object.getvalue() * 0.2) + (object.getvalue() + object.getvalue() * 0.4);
+                if(cont1>dinero){
+                    JOptionPane.showMessageDialog(null, "No tiene sufuciente dinero");
+                    d=true;
+                    break;
+                }else{
+                    object.Alumnos.add(alum);
+                }
             }
         }
+        if(c==0){
+            JOptionPane.showMessageDialog(null, "No ingreso una clase valida");
+            d=true;
+        }
+        return d;
     }
 }
